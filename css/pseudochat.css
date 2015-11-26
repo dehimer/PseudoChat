@@ -1,0 +1,31 @@
+::-webkit-input-placeholder {
+	color: black;
+	opacity: 1;
+}
+ 
+:-moz-placeholder { /* Firefox 18- */
+	color: black;  
+	opacity: 1;
+}
+ 
+::-moz-placeholder {  /* Firefox 19+ */
+	color: black;
+	opacity: 1;
+}
+ 
+:-ms-input-placeholder {  
+	color: black;  
+	opacity: 1;
+}
+
+
+@font-face {
+	font-family: ProximaNovaRegular; /* Гарнитура шрифта */
+	src: url(/libs/fonts/Proxima Nova Light.otf); /* Путь к файлу со шрифтом */
+}
+
+
+
+* {
+	font-family: ProximaNovaRegular, sans-serif;
+}

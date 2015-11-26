@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>Pseudo Chat</title>
+
+	<style>
+
+		body {
+			margin: 0px;
+			padding: 0px;
+			background-color: white;
+		};
+
+	</style>
+
+    <link href="css/pseudochat.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/pseudochat.js"></script>
+
+</head>
+<body>
+	<div id="chatwrapper" style="max-width:500px;width:100%;max-height:700px;height:100%;box-sizing: border-box;"></div>
+	<script type="text/javascript">
+
+		var users_params = {
+			1: {
+				avatar: 'images/avatar1.png',
+				name: 'Друг<br>Дмитрий'
+			},
+			2: {
+				avatar: 'images/avatar2.png',
+				name: 'Геннадий'
+			}
+		};
+
+		var dialog_messages = [
+			{num:1, message:'как ты?'},
+			{num:2, message:'отлично, а ты как?'},
+
+			{num:1, message:'да, вот думаю чем бы заняться.'},
+			{num:2, message:'может, сходим на новую выставку автомобилей?'},
+
+			{num:1, message:'хорошо, когда открытие?'},
+			{num:2, message:'в 7.'},
+
+			{num:1, message:'какая то новинка?'},
+			{num:2, message:'да, должны показать новое авто'},
+
+			{num:1, message:'какое?'},
+			{num:2, message:'весту'},
+
+			{num:1, message:'аа, слышал..'},
+			{num:2, message:'и как тебе, нравится?'},
+
+			{num:1, message:'выглядит неплохо, но я бы всё равно не взял.'},
+			{num:2, message:'а что так?'},
+
+			{num:1, message:'всё равно то же ***. И цена как на бюджетную иномарку.'},
+			{num:2, message:'хм, незнай. Может быть. Всё равно интересно посмотреть что у них получилось.'},
+
+			{num:1, message:'да, сходим, оценим.'},
+			{num:2, message:'сам менять машину не думаешь?'},
+
+			{num:1, message:'да пока нет наврено. Не то время. На своей пока поезжу.'},
+			{num:1, message:'а ты что, весту хочешь взять!?.'},
+			{num:2, message:'пока не знаю'},
+
+			{num:1, message:'не пугай меня!)'},
+		]; 
+
+		//
+
+		var params = {
+			border_color:'#aaa',	//цвет рамки
+			border_size:5,	//размер рамки
+			youname:'Вы',	//имя, которое будет отображаться, когда человек введёт своё сообщение
+			target_element_id:'chatwrapper', //идентификатор элемента
+			chat_name: 'НАЗВАНИЕ', //название чата
+			users_params:users_params,
+			dialog_messages:dialog_messages
+		};
+
+		var pseudoChat = new PseudoChat(params);
+	</script>
+</body>
+</html>
