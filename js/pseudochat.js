@@ -12,6 +12,8 @@ window.PseudoChat = function (options) {
         border_size: options.border_size?options.border_size:'1'
     }
 
+    var dotanimationdelay = options.dotanimationdelay?options.dotanimationdelay:200
+
     var nexttoleft = false;
 
     var gen_new_message = function (login, message, avatar)
@@ -185,7 +187,7 @@ window.PseudoChat = function (options) {
                 newmsgindicator.getElementsByClassName('roundind')[2].style.opacity = 1;
             }
         }
-    }, 200);
+    }, dotanimationdelay);
 
     var lastdelay = 1;
 
